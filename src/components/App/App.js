@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+import MainPage from './MainPaige'
+
 import './App.css';
 
 function App() {
