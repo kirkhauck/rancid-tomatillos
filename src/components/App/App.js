@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import movieMockData from '../../movieData/movieData';
+import movieMockData from '../../movieData';
 import './App.css';
 
 class App extends Component {
