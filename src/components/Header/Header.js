@@ -1,10 +1,13 @@
 import React from "react";
+import tomatilloImg from "../../assets/tomatillo.png"
 import "./Header.css"
 
 const Header = () => {
-  <div className="header-section">
-    <img src="src/Assets/tomatillo.png"></img>
-    <h1>Rancid Tomatillos</h1>
+  return (
+    <div className="header-section">
+      <img src={tomatilloImg} />
+      <h1>Rancid Tomatillos</h1>
     </div>
+  );
 }
 export default Header;
