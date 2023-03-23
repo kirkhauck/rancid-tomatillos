@@ -16,8 +16,9 @@ class App extends Component {
   }
 
   render() {
-    return (
+    return (<>
       <h1>Hello world!</h1>
+      </>
     );
   }
 }
