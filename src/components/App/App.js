@@ -13,9 +13,9 @@ class App extends Component {
     }
   }
   
-  // componentDidMount = () => {
-  //   this.setState({ movieData: movieMockData });
-  // }
+  componentDidMount = () => {
+    this.setState({ movieData: movieMockData });
+  }
 
   render() {
     return (
