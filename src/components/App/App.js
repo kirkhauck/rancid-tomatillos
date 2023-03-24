@@ -8,8 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      movieData: movieMockData,
-      selectedMovie: {}
+      movieData: '',
+      selectedMovie: ''
     }
   }
   
@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <main className='App'>
         <Header />
-        <MoviesContainer movieData={this.state.movieData} />
+        {this.state.movieData ? <MoviesContainer movieData={this.state.movieData} /> : <p>Loading...</p>}
       </main>
     );
   }
