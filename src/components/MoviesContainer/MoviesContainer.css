@@ -2,9 +2,9 @@
   padding:0%;
   display: grid;
   width: 100%;
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0.4rem;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
   border: 1px solid black;
   height: 300px;
 }
