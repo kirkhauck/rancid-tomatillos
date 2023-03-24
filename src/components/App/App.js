@@ -18,11 +18,20 @@ class App extends Component {
     this.setState({ movieData: movieMockData });
   }
 
+  selectMovie = id => {
+    this.setState({ selectedMovie: id });
+  }
+
   render() {
     return (
       <main className='App'>
         <Header />
-        {/* {this.state.movieData ? <MoviesContainer movieData={this.state.movieData} /> : <p>Loading...</p>} */}
+        {this.state.movieData ?
+        <MoviesContainer
+          movieData={this.state.movieData}
+          selectMovie={this.selectMovie}
+        /> :
+        <p>Loading...</p>}
         <SingleMovieContainer />
       </main>
     );

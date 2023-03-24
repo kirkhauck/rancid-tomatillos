@@ -2,7 +2,7 @@ import React from 'react';
 
 const SingleMovieContainer = () => {
   return (
-    <div>
+    <div className='hidden'>
       <h1>Oh hi there.</h1>
     </div>
   )
