@@ -10,7 +10,7 @@ class App extends Component {
     super();
     this.state = {
       movieData: '',
-      selectedMovie: ''
+      selectedMovieId: ''
     }
   }
   
@@ -19,20 +19,21 @@ class App extends Component {
   }
 
   selectMovie = id => {
-    this.setState({ selectedMovie: id });
+    this.setState({ selectedMovieId: id });
+    this.forceUpdate();
   }
 
   render() {
     return (
       <main className='App'>
         <Header />
-        {this.state.movieData ?
+        {this.state.movieData && !this.state.selectedMovieId ?
         <MoviesContainer
           movieData={this.state.movieData}
           selectMovie={this.selectMovie}
         /> :
-        <p>Loading...</p>}
-        <SingleMovieContainer />
+        /*<p>Loading...</p>*/ null}
+        {this.state.selectedMovieId && <SingleMovieContainer />}
       </main>
     );
   }

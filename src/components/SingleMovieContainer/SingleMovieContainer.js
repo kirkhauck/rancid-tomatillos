@@ -1,11 +1,26 @@
-import React from 'react';
+import React, {Component} from 'react';
+import singleMockData1 from '../../singleMovieData/singleMovie1';
+import singleMockData2 from '../../singleMovieData/singleMovie2';
 
-const SingleMovieContainer = () => {
-  return (
-    <div className='hidden'>
-      <h1>Oh hi there.</h1>
-    </div>
-  )
+class SingleMovieContainer extends Component {
+  constructor() {
+    super()
+    this.state = {
+      singleMovieData: ''
+    }
+  }
+
+  componentDidMount = () => {
+    this.setState({ singleMovieData: singleMockData1 });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hi!</h1>
+      </div>
+    );
+  }
 }
 
 export default SingleMovieContainer;
