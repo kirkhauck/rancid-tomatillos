@@ -18,7 +18,7 @@ const MoviesContainer = ({ movieData }) => {
   });
 
   return(
-    <div>
+    <div className="movieGrid">
       {movies}
     </div>
   );

@@ -4,6 +4,7 @@
   width: 12vw;
   margin: 1%;
   box-shadow: 1px 1px 10px 5px rgba(255, 255, 255, 0.423);
+  font-size: 1.8vh;
 }
 
 .movieCard:hover {

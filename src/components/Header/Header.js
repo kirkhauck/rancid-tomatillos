@@ -4,8 +4,8 @@ import "./Header.css"
 
 const Header = () => {
   return (
-    <div className="header-section">
-      <img src={tomatilloImg} />
+    <div className="header">
+      <img className="logo" src={tomatilloImg} />
       <h1>Rancid Tomatillos</h1>
     </div>
   );
