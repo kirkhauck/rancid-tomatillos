@@ -1,5 +1,5 @@
-import React from "react";
-import "./SingleMovieBanner.css";
+import React from 'react';
+import './SingleMovieBanner.css';
 
 
 const SingleMovieBanner = ({poster_path}) => {
