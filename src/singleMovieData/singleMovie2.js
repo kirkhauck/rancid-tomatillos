@@ -17,3 +17,5 @@ const singleMockData2 = {
   average_rating: 6
   }
 }
+
+export default singleMockData2;
