@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
+import getMovieData from '../../ApiCall';
 import Header from '../Header/Header';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
-import movieMockData from '../../movieData/movieData';
+// import movieMockData from '../../movieData/movieData';
 import './App.css';
 import SingleMovieContainer from '../SingleMovieContainer/SingleMovieContainer';
-import getMovieData from '../../ApiCall';
 
 class App extends Component {
   constructor() {
@@ -16,10 +16,7 @@ class App extends Component {
   }
   
   componentDidMount() {
-    getMovieData().then(data => {
-      this.setState({movieData: data})
-    })
-    
+    getMovieData().then(data => this.setState({movieData: data}));
     // this.setState({ movieData: movieMockData });
   }
 
@@ -38,7 +35,7 @@ class App extends Component {
           selectMovie={this.selectMovie}
         /> :
         /*<p>Loading...</p>*/ null}
-        {this.state.selectedMovieId && <SingleMovieContainer />}
+        {this.state.selectedMovieId && <SingleMovieContainer movieId={this.state.selectedMovieId}/>}
       </main>
     );
   }
