@@ -25,6 +25,10 @@ class App extends Component {
     this.forceUpdate();
   }
 
+  clearMovieId = () => {
+    this.setState({selectedMovieId: ''});
+  }
+
   render() {
     return (
       <main className='App'>
@@ -35,7 +39,7 @@ class App extends Component {
           selectMovie={this.selectMovie}
         /> :
         /*<p>Loading...</p>*/ null}
-        {this.state.selectedMovieId && <SingleMovieContainer movieId={this.state.selectedMovieId}/>}
+        {this.state.selectedMovieId && <SingleMovieContainer clearMovieId={this.clearMovieId} movieId={this.state.selectedMovieId}/>}
       </main>
     );
   }
