@@ -1,5 +1,6 @@
 import React from 'react';
 import './MovieDetailsSection.css';
+import PropTypes, { shape } from 'prop-types'
 
 
 const MovieDetailsSection = ({details}) => {
@@ -27,4 +28,8 @@ const MovieDetailsSection = ({details}) => {
 }
 
 export default MovieDetailsSection;
+
+MovieDetailsSection.propTypes = {
+  details: PropTypes.object
+}
 
