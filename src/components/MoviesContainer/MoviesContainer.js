@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import MovieCard from '../MovieCard/MovieCard';
 import './MoviesContainer.css';
 
@@ -23,6 +24,11 @@ const MoviesContainer = ({ movieData, selectMovie }) => {
       {movies}
     </div>
   );
+}
+
+MoviesContainer.propTypes = {
+  movieData: PropTypes.object.isRequired,
+  selectMovie: PropTypes.func.isRequired
 }
 
 export default MoviesContainer;
