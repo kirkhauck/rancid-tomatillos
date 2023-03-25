@@ -2,13 +2,13 @@ import React from 'react';
 import './SingleMovieBanner.css';
 
 
-const SingleMovieBanner = ({poster_path}) => {
+const SingleMovieBanner = ({image}) => {
  
     return (
       <div>
       <img
         className="banner"
-        src={poster_path}
+        src={image}
       />
       </div>
     );
