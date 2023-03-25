@@ -1,0 +1,20 @@
+h1 {
+  position: static;
+  margin: 0
+}
+
+.movie-details {
+  text-align: left;
+}
+
+.movie-title-tagline {
+  margin-left: 20px;
+}
+
+.movie-overview {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 5%;
+  box-sizing: border-box;
+  margin-left: 20px;
+}

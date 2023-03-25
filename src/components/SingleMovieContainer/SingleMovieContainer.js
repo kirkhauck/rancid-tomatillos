@@ -22,7 +22,6 @@ class SingleMovieContainer extends Component {
       <div>
         {this.state.singleMovieData &&  <SingleMovieBanner image={this.state.singleMovieData.movie.backdrop_path}/>}
         {this.state.singleMovieData &&  <MovieDetailsSection details={this.state.singleMovieData}/>}
-        <h1>Hi!</h1>
       </div>
     );
   }
