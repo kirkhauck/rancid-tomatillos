@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import getMovieData from '../../ApiCall';
 // import singleMockData1 from '../../singleMovieData/singleMovie1';
 // import singleMockData2 from '../../singleMovieData/singleMovie2';
@@ -34,6 +35,11 @@ class SingleMovieContainer extends Component {
       </div>
     );
   }
+}
+
+SingleMovieContainer.propTypes = {
+  clearMovieId: PropTypes.func,
+  movieId: PropTypes.number
 }
 
 export default SingleMovieContainer;
