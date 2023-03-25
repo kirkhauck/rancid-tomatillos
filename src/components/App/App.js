@@ -4,6 +4,7 @@ import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import movieMockData from '../../movieData/movieData';
 import './App.css';
 import SingleMovieContainer from '../SingleMovieContainer/SingleMovieContainer';
+import getMovieData from '../../ApiCall';
 
 class App extends Component {
   constructor() {
@@ -14,8 +15,12 @@ class App extends Component {
     }
   }
   
-  componentDidMount = () => {
-    this.setState({ movieData: movieMockData });
+  componentDidMount() {
+    getMovieData().then(data => {
+      this.setState({movieData: data})
+    })
+    
+    // this.setState({ movieData: movieMockData });
   }
 
   selectMovie = id => {
