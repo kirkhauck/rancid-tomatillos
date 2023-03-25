@@ -1,4 +1,5 @@
 import React from 'react'; 
+import PropTypes, { shape } from 'prop-types'
 import './ButtonHome.css'
 
 const ButtonHome = ({resetState, clearMovieId}) => { 
@@ -17,3 +18,8 @@ const ButtonHome = ({resetState, clearMovieId}) => {
 } 
 
 export default ButtonHome;
+
+ButtonHome.propTypes = {
+  resetState: PropTypes.func,
+  clearMovieId: PropTypes.func
+}
