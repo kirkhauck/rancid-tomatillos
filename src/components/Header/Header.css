@@ -22,14 +22,5 @@ h1{
   position: relative;
   width: 8vw;
   height: 14vh;
-  animation: fadein 4s;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}

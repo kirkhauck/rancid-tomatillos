@@ -6,6 +6,7 @@ import getMovieData from '../../ApiCall';
 import MovieDetailsSection from '../MovieDetailsSection/MovieDetailsSection';
 import SingleMovieBanner from '../SingleMovieBanner/SingleMovieBanner';
 import ButtonHome from '../ButtonHome/ButtonHome'
+import './SingleMovieContainer.css'
 
 
 class SingleMovieContainer extends Component {
