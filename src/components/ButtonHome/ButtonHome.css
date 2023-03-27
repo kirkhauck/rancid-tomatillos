@@ -1,0 +1,15 @@
+.button-home{
+  background-color: #fdfdfd;
+  color: #000000;
+  cursor: pointer;
+  font-size: 1vw;
+  line-height: 2em;
+  margin: 0.1vh;
+  min-width: 10%;
+  box-shadow: 1px 1px 10px 5px rgba(255, 255, 255, 0.423);
+  text-align: center;
+}
+
+.button-home:hover {
+  background-color: rgb(151, 151, 151);
+}

@@ -5,4 +5,15 @@
   height: 60vh;
   object-fit: cover;
   object-position: 0 13%;
+  animation: fadein 4s;
+}
+
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

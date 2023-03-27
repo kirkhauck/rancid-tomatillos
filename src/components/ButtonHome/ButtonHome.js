@@ -10,7 +10,7 @@ const ButtonHome = ({resetState, clearMovieId}) => {
   
   return ( 
     <div>
-    <button onClick={goHome}>Home</button>
+    <button className="button-home" onClick={goHome}>Home</button>
     </div> 
     
   ); 
