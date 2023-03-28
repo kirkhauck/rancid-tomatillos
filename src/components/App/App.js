@@ -5,6 +5,7 @@ import MoviesContainer from '../MoviesContainer/MoviesContainer';
 // import movieMockData from '../../movieData/movieData';
 import './App.css';
 import SingleMovieContainer from '../SingleMovieContainer/SingleMovieContainer';
+import { Route } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -33,16 +34,32 @@ class App extends Component {
     return (
       <main className='App'>
         <Header />
-        {this.state.movieData && !this.state.selectedMovieId ?
-        <MoviesContainer
-          movieData={this.state.movieData}
-          selectMovie={this.selectMovie}
-        /> :
-        /*<p>Loading...</p>*/ null}
-        {this.state.selectedMovieId && <SingleMovieContainer clearMovieId={this.clearMovieId} movieId={this.state.selectedMovieId}/>}
+        { this.state.movieData && !this.state.selectedMovieId &&
+          <Route path='/' render={ () => <MoviesContainer
+            movieData={this.state.movieData}
+            selectMovie={this.selectMovie}
+            />}
+          />
+        }
       </main>
     );
   }
 }
+
+//   render() {
+//     return (
+//       <main className='App'>
+//         <Header />
+//         {this.state.movieData && !this.state.selectedMovieId ?
+//         <MoviesContainer
+//           movieData={this.state.movieData}
+//           selectMovie={this.selectMovie}
+//         /> :
+//         /*<p>Loading...</p>*/ null}
+//         {this.state.selectedMovieId && <SingleMovieContainer clearMovieId={this.clearMovieId} movieId={this.state.selectedMovieId}/>}
+//       </main>
+//     );
+//   }
+// }
 
 export default App;

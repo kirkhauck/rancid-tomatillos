@@ -25,6 +25,4 @@ MovieCard.propTypes = {
   release_date: PropTypes.string,
   poster_path: PropTypes.string,
   selectMovie: PropTypes.func
-  
-
 }
