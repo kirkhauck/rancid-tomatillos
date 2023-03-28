@@ -20,7 +20,7 @@ describe('Rancid Tomatillos', () => {
 
 describe('Rancid Tomatillos Details Page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000').click();
+    cy.visit('http://localhost:3000/436270').contains('h3','Black Adam').click();
   });
      it('Should show the details page with the header', () => {
      cy.get('.header').find('img');
