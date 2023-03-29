@@ -1,25 +1,19 @@
 import React from 'react'; 
 import PropTypes, { shape } from 'prop-types'
 import './ButtonHome.css'
+import { Link } from 'react-router-dom'
 
-const ButtonHome = ({resetState, clearMovieId}) => { 
-  const goHome = () => {
-    resetState()
-    clearMovieId()
-  }
-  
+const ButtonHome = () => { 
+
   return ( 
-    <div>
-    <button className="button-home" onClick={goHome}>Home</button>
-    </div> 
-    
+    <Link to="/">
+      <button className="button-home">Home</button>
+    </Link>
   ); 
-  
 } 
 
 export default ButtonHome;
 
 ButtonHome.propTypes = {
   resetState: PropTypes.func,
-  clearMovieId: PropTypes.func
 }
