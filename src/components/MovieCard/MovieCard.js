@@ -1,17 +1,19 @@
 import React from 'react';
 import './MovieCard.css';
-import PropTypes, { shape } from 'prop-types'
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 
 const MovieCard = ({id, title, average_rating, release_date, poster_path, selectMovie }) => {
 
-  console.log(selectMovie, "hi")
   return (
-    <div className='movie-card' onClick={() => selectMovie(id)}>
-      <img className='movie-img' src={poster_path}/>
-      <h3>{title}</h3>
-      <p>{average_rating}</p>
-      <p>{release_date}</p>
+    <div className='movie-card'>
+      <Link to={`/${id}`}>
+        <img className='movie-img' src={poster_path}/>
+        <h3>{title}</h3>
+        <p>{average_rating}</p>
+        <p>{release_date}</p>
+      </Link>
     </div>
   )
 }
@@ -25,6 +27,4 @@ MovieCard.propTypes = {
   release_date: PropTypes.string,
   poster_path: PropTypes.string,
   selectMovie: PropTypes.func
-  
-
 }

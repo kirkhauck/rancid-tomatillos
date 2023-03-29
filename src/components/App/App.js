@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import getMovieData from '../../ApiCall';
 import Header from '../Header/Header';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
-// import movieMockData from '../../movieData/movieData';
 import './App.css';
 import SingleMovieContainer from '../SingleMovieContainer/SingleMovieContainer';
+import { Route } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -17,7 +17,6 @@ class App extends Component {
   
   componentDidMount() {
     getMovieData().then(data => this.setState({movieData: data}));
-    // this.setState({ movieData: movieMockData });
   }
 
   selectMovie = id => {
@@ -25,21 +24,18 @@ class App extends Component {
     this.forceUpdate();
   }
 
-  clearMovieId = () => {
-    this.setState({selectedMovieId: ''});
-  }
-
   render() {
     return (
       <main className='App'>
         <Header />
-        {this.state.movieData && !this.state.selectedMovieId ?
-        <MoviesContainer
-          movieData={this.state.movieData}
-          selectMovie={this.selectMovie}
-        /> :
-        /*<p>Loading...</p>*/ null}
-        {this.state.selectedMovieId && <SingleMovieContainer clearMovieId={this.clearMovieId} movieId={this.state.selectedMovieId}/>}
+        { this.state.movieData && !this.state.selectedMovieId &&
+          <Route exact path='/' render={ () => <MoviesContainer
+            movieData={this.state.movieData}
+            selectMovie={this.selectMovie}
+            />}
+          />
+        }
+        <Route exact path={'/:id'} render={ ({ match }) => <SingleMovieContainer id={match.params.id}/>} />
       </main>
     );
   }
