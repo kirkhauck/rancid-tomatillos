@@ -1,22 +1,25 @@
 import React, {Component} from 'react';
 import getMovieData from '../../ApiCall';
 import Header from '../Header/Header';
+import Error from '../Error/Error'
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import './App.css';
 import SingleMovieContainer from '../SingleMovieContainer/SingleMovieContainer';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       movieData: '',
-      selectedMovieId: ''
+      selectedMovieId: '',
+      error: ''
     }
   }
   
   componentDidMount() {
-    getMovieData().then(data => this.setState({movieData: data}));
+    getMovieData().then(data => this.setState({movieData: data}))
+    .catch(error => this.setState({ error: error }));
   }
 
   selectMovie = id => {
@@ -25,17 +28,24 @@ class App extends Component {
   }
 
   render() {
+ 
     return (
       <main className='App'>
         <Header />
+         {this.state.error && <Error />}
+        <Switch>
         { this.state.movieData && !this.state.selectedMovieId &&
           <Route exact path='/' render={ () => <MoviesContainer
             movieData={this.state.movieData}
             selectMovie={this.selectMovie}
+            error={this.state.error}
             />}
           />
         }
+        {this.state.error && <Error />}
         <Route exact path={'/:id'} render={ ({ match }) => <SingleMovieContainer id={match.params.id}/>} />
+        <Route exact path="*" component={ Error } />
+        </Switch>
       </main>
     );
   }
