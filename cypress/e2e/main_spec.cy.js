@@ -28,6 +28,17 @@ describe('Main Page', () => {
       .get('.movie-card:last()').find('p:first()').contains('5')
       .get('.movie-card:last()').find('p:last()').contains('2022-11-04');
   });
+
+  it('Should handle an error when failing to fetch.', () => {
+  cy.intercept('GET','https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
+    statusCode: 404
+  })
+  })
+
+  it('Should send the user a message when the fetch failed', () => {
+    cy.contains('Not Found!')
+  })
+
 });
 
 
