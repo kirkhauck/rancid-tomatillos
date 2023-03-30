@@ -1,21 +1,25 @@
-
-
-describe('Main Page', () => {
-  beforeEach(() => {
+describe('Home Button', () => {
+  beforeEach('Go to movie details', () => {
     cy.visit('http://localhost:3000')
     cy.loadPage()
+    cy.get('.movie-card').contains('h3', 'Black Adam').click()
+    cy.loadSingleMovie()
+  })
+  
+  it('should show a home button', () => {
+    cy.get('.button-home').contains('button', 'Home')
+  })
 
-  });
-  it('Should show the main page with a header', () => {
+  it('should go back to the home page when clicked', () => {
+    cy.get('.button-home').click();
+
     cy.url().should('eq', 'http://localhost:3000/');
 
     cy.get('.header').get('img')
       .should('have.attr', 'src', '/static/media/tomatillo.c57a8444c30f4e09f57a.png')
       .should('be.visible')
       .get('.header').contains('h1', 'Rancid Tomatillos');
-  });
-
-  it('Should show thumbnails of all the movies', () => {
+    
     cy.get('.movie-card').should('have.length', 5);
     
     cy.get('.movie-card:first()').find('img').should('have.attr', 'src', 'https://image.tmdb.org/t/p/original//pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg')
@@ -28,12 +32,4 @@ describe('Main Page', () => {
       .get('.movie-card:last()').find('p:first()').contains('5')
       .get('.movie-card:last()').find('p:last()').contains('2022-11-04');
   });
-});
-
-
-
-  
-
-
-
-
+})
