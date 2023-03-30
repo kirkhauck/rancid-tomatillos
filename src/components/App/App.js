@@ -32,13 +32,11 @@ class App extends Component {
     return (
       <main className='App'>
         <Header />
-         {this.state.error && <Error />}
         <Switch>
         { this.state.movieData && !this.state.selectedMovieId &&
           <Route exact path='/' render={ () => <MoviesContainer
             movieData={this.state.movieData}
             selectMovie={this.selectMovie}
-            error={this.state.error}
             />}
           />
         }
