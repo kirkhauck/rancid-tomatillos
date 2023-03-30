@@ -11,12 +11,14 @@ class SingleMovieContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      singleMovieData: ''
+      singleMovieData: '',
+      error: ''
     }
   }
 
   componentDidMount = () => {
     getMovieData(this.props.id).then(data => this.setState({ singleMovieData: data }))
+    .catch(error => this.setState({error: error}))
   }
 
   resetState = () => {
@@ -27,6 +29,7 @@ class SingleMovieContainer extends Component {
     return (
       <div>
         <ButtonHome resetState={this.resetState}/>
+        {this.state.error && <p>Something went wrong when loading the movie. Click Home to select another movie.</p>}
         {this.state.singleMovieData &&  <SingleMovieBanner image={this.state.singleMovieData.movie.backdrop_path}/>}
         {this.state.singleMovieData &&  <MovieDetailsSection details={this.state.singleMovieData}/>}
       </div>
