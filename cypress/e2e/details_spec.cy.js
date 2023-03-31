@@ -40,7 +40,7 @@ describe('Rancid Tomatillos Details Page', () => {
 describe('Rancid Tomatillos Details Page Sad Path', () => {
   it('Should show an error message with failed fetch with button to go home', () => {
     cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/436270', {
-      statusCode: 404,
+      statusCode: 404
     });
 
     cy.visit('http://localhost:3000')
