@@ -13,7 +13,8 @@ const MovieDetailsSection = ({details}) => {
         <div>
           <p>Runtime: {details.movie.runtime} minutes</p>
           <p>Released: {details.movie.release_date}</p>
-          <p>{details.movie.genres}</p>
+          {console.log(details.movie.genres)}
+          <p>{details.movie.genres.join(' | ')}</p>
           <p>Budget: ${details.movie.budget.toLocaleString('en-US')}</p>
           <p>Revenue: ${details.movie.revenue.toLocaleString('en-US')}</p>
           <p>Average Rating: {details.movie.average_rating}/10</p>
@@ -29,4 +30,3 @@ export default MovieDetailsSection;
 MovieDetailsSection.propTypes = {
   details: PropTypes.object
 }
-
