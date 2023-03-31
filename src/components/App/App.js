@@ -42,7 +42,6 @@ class App extends Component {
         }
         {this.state.error && <Error />}
         <Route exact path={'/:id'} render={ ({ match }) => <SingleMovieContainer id={match.params.id}/>} />
-        <Route exact path="*" component={ Error } />
         </Switch>
       </main>
     );
