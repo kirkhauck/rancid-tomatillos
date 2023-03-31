@@ -11,11 +11,10 @@ const MovieDetailsSection = ({details}) => {
         <h2>{details.movie.tagline}</h2>
       </div>
       <div className='movie-overview'>
-        <div>
+        <div className='stats'>
+          <p className='genres'>{details.movie.genres.join(' | ')}</p>
           <p>Runtime: {details.movie.runtime} minutes</p>
           <p>Released: {formatDate(details.movie.release_date)}</p>
-          {console.log(details.movie.genres)}
-          <p>{details.movie.genres.join(' | ')}</p>
           <p>Budget: ${details.movie.budget.toLocaleString('en-US')}</p>
           <p>Revenue: ${details.movie.revenue.toLocaleString('en-US')}</p>
           <p>Average Rating: {details.movie.average_rating}/10</p>

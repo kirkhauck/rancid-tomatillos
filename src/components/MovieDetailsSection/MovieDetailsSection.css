@@ -7,6 +7,18 @@ h1 {
   text-align: left;
 }
 
+.stats :nth-last-child(-n+5) {
+  margin: 0.3em 0
+}
+
+.stats :last-child {
+  margin-bottom: 20%
+}
+
+.genres {
+  font-weight: 900;
+}
+
 .movie-title-tagline {
   margin-left: 20px;
 }
