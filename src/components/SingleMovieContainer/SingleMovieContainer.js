@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import getMovieData from '../../ApiCall';
 import MovieDetailsSection from '../MovieDetailsSection/MovieDetailsSection';
 import SingleMovieBanner from '../SingleMovieBanner/SingleMovieBanner';
-import ButtonHome from '../ButtonHome/ButtonHome'
-import './SingleMovieContainer.css'
+import ButtonHome from '../ButtonHome/ButtonHome';
+
 
 
 class SingleMovieContainer extends Component {

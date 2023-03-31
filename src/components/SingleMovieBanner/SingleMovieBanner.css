@@ -1,11 +1,10 @@
 
-
 .banner {
-  width: 100vw;
+  animation: fadein 4s;
   height: 60vh;
   object-fit: cover;
   object-position: 0 13%;
-  animation: fadein 4s;
+  width: 100vw;
 }
 
 

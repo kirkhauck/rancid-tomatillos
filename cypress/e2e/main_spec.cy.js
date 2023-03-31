@@ -36,7 +36,7 @@ describe('Failed Main Page Fetch', () => {
       statusCode: 404
     });
       cy.visit('http://localhost:3000');
-      cy.contains('Not Found!');
+      cy.contains('Something went wrong when loading the page. Try again.');
     });
   });
 })

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import getMovieData from '../../ApiCall';
 import Header from '../Header/Header';
-import Error from '../Error/Error'
+import Error from '../Error/Error';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import './App.css';
 import SingleMovieContainer from '../SingleMovieContainer/SingleMovieContainer';
@@ -41,7 +41,7 @@ class App extends Component {
           />
         }
         {this.state.error && <Error />}
-        <Route exact path={'/:id'} render={ ({ match }) => <SingleMovieContainer id={match.params.id}/>} />
+          <Route exact path={'/:id'} render={ ({ match }) => <SingleMovieContainer id={match.params.id}/>} />
         </Switch>
       </main>
     );

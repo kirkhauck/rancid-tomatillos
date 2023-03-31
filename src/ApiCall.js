@@ -7,6 +7,6 @@ const getMovieData = id => {
       throw new Error( `${response.status}:${response.statusText}`)
     }
       return response.json();
-  })
+  });
 }
-export default getMovieData
+export default getMovieData;
