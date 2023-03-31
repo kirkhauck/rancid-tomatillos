@@ -7,7 +7,7 @@ const ButtonHome = () => {
 
   return ( 
     <Link to="/">
-      <button className="button-home">Home</button>
+      <button className="button-home" role="button">Home</button>
     </Link>
   ); 
 } 
