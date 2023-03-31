@@ -1,6 +1,7 @@
 import React from 'react';
 import './MovieDetailsSection.css';
-import PropTypes, { shape } from 'prop-types'
+import PropTypes from 'prop-types'
+import formatDate from '../utils';
 
 const MovieDetailsSection = ({details}) => {
   return (
@@ -12,7 +13,7 @@ const MovieDetailsSection = ({details}) => {
       <div className='movie-overview'>
         <div>
           <p>Runtime: {details.movie.runtime} minutes</p>
-          <p>Released: {details.movie.release_date}</p>
+          <p>Released: {formatDate(details.movie.release_date)}</p>
           {console.log(details.movie.genres)}
           <p>{details.movie.genres.join(' | ')}</p>
           <p>Budget: ${details.movie.budget.toLocaleString('en-US')}</p>
