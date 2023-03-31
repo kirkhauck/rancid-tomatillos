@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Rancid Tomatillos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract
 
-## Available Scripts
+Rancid Tomatillos is an app mimicking a movie database, created using React. Upon first visiting the site, the user is presented with a collection of movie images with basic stats such as release date, runtime, and average rating. The user can click any movie and be taken to a new page featuring more detailed information about the movie.
+***
 
-In the project directory, you can run:
+### Technologies Used:
+- JavaScript
+- HTML
+- CSS
+- React
+- Router
+- Cypress
+***
 
-### `npm start`
+### Installation Instructions:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone down a local copy of [the repository](https://github.com/kirkhauck/rancid-tomatillos).
+1. `cd` into the repository and run `npm install`.
+1. You can open the project in your preferred text editor.
+1. To host the page on your local server run `npm start`.
+***
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Preview of App:
+![](demo.gif)
+***
 
-### `npm test`
+### Context:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Completed as part of the Turing School of Software Development 2211 FE Mod 3 curriculum
 
-### `npm run build`
+Approximate hours to completion: 25
+***
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Contributors:
+[Lexye Jordan](https://github.com/Lexyful)
+[Kirk Hauck](https://github.com/kirkhauck)
+***
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Learning Goals:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Gain competency with React fundamentals
+- Learn how to test React components & asynchronous JS
+- Practice refactoring
+- Create a multi-page UX using Router
+***
 
-### `npm run eject`
+### Wins + Challenges:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Win:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Successfully learned how use React components to render a stateful, functional app.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Win:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Successfully utilized GET and POST to use data from a remote API.
 
-## Learn More
+**Challenge:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Implementing a dynamic URL presented the largest challenge for us. We were able to arrive at solution by using `render` to pass down the `match` object to `SingleMovieContainer` and use `match.params.id` to match a single movie's id (also used as its URL end path) to dynamically render a single movie's details page.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Challenge:**
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Making multiple `MovieCard` components from the API data was a challenge. We arrived at a solution by passing all the API data via props to `MoviesContainer` and using the `.map()` array prototype method to return single `MovieCard` components.
