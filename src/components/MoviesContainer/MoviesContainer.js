@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import MovieCard from '../MovieCard/MovieCard';
 import './MoviesContainer.css';
 
-const MoviesContainer = ({ movieData, selectMovie }) => {
+const MoviesContainer = ({ movieData }) => {
   const movies = movieData.movies.map(movie => {
     return (
       <MovieCard
@@ -14,7 +14,6 @@ const MoviesContainer = ({ movieData, selectMovie }) => {
         title={movie.title}
         average_rating={movie.average_rating}
         release_date={movie.release_date}
-        selectMovie={selectMovie}
       />
     )
   });

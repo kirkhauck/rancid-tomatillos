@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import formatDate from '../utils';
 
 
-const MovieCard = ({id, title, average_rating, release_date, poster_path, selectMovie }) => {
+const MovieCard = ({ id, title, average_rating, release_date, poster_path }) => {
 
   return (
     <div className='movie-card'>

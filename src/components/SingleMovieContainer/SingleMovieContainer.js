@@ -18,11 +18,11 @@ class SingleMovieContainer extends Component {
 
   componentDidMount = () => {
     getMovieData(this.props.id).then(data => this.setState({ singleMovieData: data }))
-    .catch(error => this.setState({error: error}))
+    .catch(error => this.setState({error: error}));
   }
 
   resetState = () => {
-    this.setState({singleMovieData : ''})
+    this.setState({singleMovieData : ''});
   }
   
   render() {
