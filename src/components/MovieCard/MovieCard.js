@@ -8,7 +8,7 @@ const MovieCard = ({id, title, average_rating, release_date, poster_path, select
 
   return (
     <div className='movie-card'>
-      <Link to={`/${id}`}>
+      <Link to={`/${id}`} className='text-link'>
         <img className='movie-img' src={poster_path}/>
         <h3>{title}</h3>
         <p>{average_rating}</p>
