@@ -2,6 +2,7 @@ import React from 'react';
 import './MovieCard.css';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import formatDate from '../utils';
 
 
 const MovieCard = ({id, title, average_rating, release_date, poster_path, selectMovie }) => {
@@ -11,8 +12,8 @@ const MovieCard = ({id, title, average_rating, release_date, poster_path, select
       <Link to={`/${id}`} className='text-link'>
         <img className='movie-img' src={poster_path}/>
         <h3>{title}</h3>
-        <p>{average_rating}</p>
-        <p>{release_date}</p>
+        <p>Rating: {average_rating}/10</p>
+        <p>Released: {formatDate(release_date)}</p>
       </Link>
     </div>
   )
