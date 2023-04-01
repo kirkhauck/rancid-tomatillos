@@ -7,14 +7,7 @@ describe('Rancid Tomatillos Details Page', () => {
   });
 
   it('Should show the details page with the header', () => {
-     cy.get('.header').find('img');
      cy.get('.header').contains('h1', 'Rancid Tomatillos');
-  });
-
-  it('Should have a banner', () => {
-    cy.get('img')
-    .should( 'have.attr', 'src', '/static/media/tomatillo.c57a8444c30f4e09f57a.png')
-    .should('be.visible')
   });
    
   it('Should have details', () => {

@@ -12,15 +12,8 @@ h1{
   font-size: 3vw;
   font-weight: 900;
   margin-top: 2%;
-  margin-left: 6%;
+  margin-left: 2%;
   position: absolute;
   z-index: 1;
   text-shadow: 0vw 0vw 3vw rgb(167, 162, 162);
 }
-
-.logo {
-  position: relative;
-  width: 8vw;
-  height: 14vh;
-}
-

@@ -7,10 +7,7 @@ describe('Main Page', () => {
   it('Should show the main page with a header', () => {
     cy.url().should('eq', 'http://localhost:3000/');
 
-    cy.get('.header').get('img')
-      .should('have.attr', 'src', '/static/media/tomatillo.c57a8444c30f4e09f57a.png')
-      .should('be.visible')
-      .get('.header').contains('h1', 'Rancid Tomatillos');
+    cy.get('.header').contains('h1', 'Rancid Tomatillos');
   });
 
   it('Should show thumbnails of all the movies', () => {
