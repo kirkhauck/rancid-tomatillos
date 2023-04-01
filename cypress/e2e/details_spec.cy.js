@@ -20,22 +20,15 @@ describe('Rancid Tomatillos Details Page', () => {
   it('Should have details', () => {
     cy.get('.movie-details').contains('h1', 'Black Adam', 'h2', 'The world needed a hero. It got Black Adam.')
 
-    cy.get('.stats')
-    .find('p:first()').contains('Action | Fantasy | Science Fiction')
-    cy.get('.stats')
-    .find('p:eq(1)').contains('Runtime: 125 minutes')
-    cy.get('.stats')
-    .find('p:eq(2)').contains('Released: 10/19/2022')
-    cy.get('.stats')
-    .find('p:eq(3)').contains('Budget: $200,000,000')
-    cy.get('.stats')
-    .find('p:eq(4)').contains('Revenue: $384,571,691')
-    cy.get('.stats')
-    .find('p:eq(5)').contains('Average Rating: 4/10')
-    cy.get('.movie-overview')
-    .contains('p', 'Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.')
-   })
-  })
+    cy.get('.stats').find('p:first()').contains('Action | Fantasy | Science Fiction')
+    .get('.stats').find('p:eq(1)').contains('Runtime: 125 minutes')
+    .get('.stats').find('p:eq(2)').contains('Released: 10/19/2022')
+    .get('.stats').find('p:eq(3)').contains('Budget: $200,000,000')
+    .get('.stats').find('p:eq(4)').contains('Revenue: $384,571,691')
+    .get('.stats').find('p:eq(5)').contains('Average Rating: 4/10')
+    .get('.movie-overview').contains('p', 'Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.')
+  });
+});
 
 describe('Rancid Tomatillos Details Page Sad Path', () => {
   it('Should show an error message with failed fetch with button to go home', () => {
