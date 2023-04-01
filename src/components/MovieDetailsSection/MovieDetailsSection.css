@@ -1,6 +1,6 @@
 h1 {
+  margin: 0;
   position: static;
-  margin: 0
 }
 
 .movie-details {
@@ -24,9 +24,9 @@ h1 {
 }
 
 .movie-overview {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-gap: 5%;
-  box-sizing: border-box;
   margin-left: 20px;
 }

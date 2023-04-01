@@ -1,6 +1,6 @@
 import React from 'react';
 import './MovieDetailsSection.css';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import formatDate from '../utils';
 
 const MovieDetailsSection = ({details}) => {

@@ -1,23 +1,9 @@
 .movie-grid{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.5rem;
-  padding:0%;
   border: 1px solid black;
-  min-height: 100%; 
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(5, 1fr);
+  min-height: 100; 
+  padding:0%;
 }
 
-
-/* .movie-grid{
-  
-  display: grid;
-  width: 100%;
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-columns: repeat(6, 1fr);
-  
- 
-  height: 300px;
-  grid-auto-rows: minmax(100px, auto);
-} */
-
-/* */
