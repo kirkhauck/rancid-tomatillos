@@ -34,8 +34,8 @@ Approximate hours to completion: 25
 ***
 
 ### Contributors:
-[Lexye Jordan](https://github.com/Lexyful)
-[Kirk Hauck](https://github.com/kirkhauck)
+- [Lexye Jordan](https://github.com/Lexyful)
+- [Kirk Hauck](https://github.com/kirkhauck)
 ***
 
 ### Learning Goals:
