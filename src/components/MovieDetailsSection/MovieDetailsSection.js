@@ -7,7 +7,7 @@ const MovieDetailsSection = ({details}) => {
   return (
     <div className='movie-details'>
       <div className='movie-title-tagline'>
-        <h1>{details.movie.title}</h1>
+        <h1 className='details-header'>{details.movie.title}</h1>
         <h2>{details.movie.tagline}</h2>
       </div>
       <div className='movie-overview'>
