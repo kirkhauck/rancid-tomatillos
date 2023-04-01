@@ -17,10 +17,3 @@ h1{
   z-index: 1;
   text-shadow: 0vw 0vw 3vw rgb(167, 162, 162);
 }
-
-.logo {
-  position: relative;
-  width: 8vw;
-  height: 14vh;
-}
-
